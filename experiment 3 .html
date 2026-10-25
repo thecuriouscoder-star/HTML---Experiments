@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Timetable</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #17365d;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px #0000001a;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        caption {
+            font-size: 22px;
+            font-weight: bold;
+            color: #17365d;
+            padding: 15px;
+        }
+
+        th, td {
+            border: 1px solid #555;
+            padding: 12px;
+        }
+
+        thead th {
+            background-color: #17365d;
+            color: white;
+        }
+
+        tbody th {
+            background-color: #dce6f1;
+        }
+
+        .lunch {
+            background-color: #ffe6a7;
+            font-weight: bold;
+            writing-mode: vertical-rl;
+        }
+
+        .lab {
+            background-color: #d9ead3;
+        }
+
+        .nested-table {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .nested-table th,
+        .nested-table td {
+            padding: 5px;
+            border: 1px solid #7a9a76;
+        }
+
+        .nested-table th {
+            background-color: #38761d;
+            color: white;
+        }
+
+        tfoot td {
+            background-color: #eaf2f8;
+            font-weight: bold;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 8px;
+                overflow-x: auto;
+            }
+
+            table {
+                min-width: 750px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>ABES Engineering College of Science and Technology</h1>
+
+        <table>
+            <caption>
+                Weekly Class Timetable — Btech, Semester I
+            </caption>
+
+            <thead>
+                <tr>
+                    <th rowspan="2">Day</th>
+                    <th colspan="2">Morning Session</th>
+                    <th rowspan="2">11:00–12:00</th>
+                    <th rowspan="2">12:00–1:00</th>
+                    <th colspan="2">Afternoon Session</th>
+                </tr>
+                <tr>
+                    <th>9:00–10:00</th>
+                    <th>10:00–11:00</th>
+                    <th>2:00–3:00</th>
+                    <th>3:00–4:00</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row">Monday</th>
+                    <td>Mathematics</td>
+                    <td>DBMS</td>
+                    <td rowspan="5" class="lunch">LUNCH BREAK</td>
+                    <td>English</td>
+                    <td colspan="2" class="lab">Computer Lab</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Tuesday</th>
+                    <td>Programming</td>
+                    <td>Mathematics</td>
+                    <td>DBMS</td>
+                    <td>Networking</td>
+                    <td>English</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Wednesday</th>
+                    <td colspan="2" class="lab">Web Development Lab</td>
+                    <td>Mathematics</td>
+                    <td>DBMS</td>
+                    <td>Programming</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Thursday</th>
+                    <td>Networking</td>
+                    <td>English</td>
+                    <td>Programming</td>
+                    <td colspan="2" class="lab">DBMS Lab</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Friday</th>
+                    <td>DBMS</td>
+                    <td>Programming</td>
+                    <td colspan="2">
+                        <!-- Nested table example -->
+                        <table class="nested-table">
+                            <caption>Practical Groups</caption>
+                            <thead>
+                                <tr>
+                                    <th>Group</th>
+                                    <th>Subject</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>A</td>
+                                    <td>Web Design</td>
+                                </tr>
+                                <tr>
+                                    <td>B</td>
+                                    <td>Database Lab</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td>Sports</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="7">
+                        Note: Saturday and Sunday are holidays.
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
